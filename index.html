@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #randomNote {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 20px;
+            padding: 20px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            max-width: 600px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="randomNote">Click the button to show a random exercise.</div>
+    <button onclick="showRandomNote()">Show Random Exercise</button>
+
+    <script>
+        // Initial notes directly embedded in the HTML file
+        const notes = [
+            // Add additional notes here
+"Quadruped hip circles",
+"Side lying hip raises",
+"Sidelying hip circles",
+"Bodyweight deadlift",
+"Clamshell",
+"Bird dog",
+"Sideplank",
+"McGill Curl up",
+"3 point plank",
+"Reverse hamstring curls",
+"Bearcrawl Bird Dog",
+"Toe raises",
+"Squats",
+"Squat Bouncers",
+"Glute Bridge",
+"Prone Hip Extension",
+"Pushups",
+"Supine hip abduction",
+"Prone hip abduction",
+"Heel raises",
+"Ankle abductions",
+"Prone hip abductions",
+"Copenhagen plank",
+"Supine hip abduction",
+
+
+
+        ];
+
+        function showRandomNote() {
+            if (notes.length > 0) {
+                const randomIndex = Math.floor(Math.random() * notes.length);
+                document.getElementById("randomNote").innerText = notes[randomIndex];
+            } else {
+                document.getElementById("randomNote").innerText = "No exercise available.";
+            }
+        }
+    </script>
+</body>
+</html>
